@@ -3,7 +3,7 @@ import videoRouter from "../routers/videoRouter";
 
 const videoSchema = new mongoose.Schema({
   title: { type: String, required: true, trim: true, maxlength: 80 },
-  description: { type: String, required: true, trim: true, minlength: 20 },
+  description: { type: String, required: true, trim: true, minlength: 10 },
   createdAt: { type: Date, required: true, default: Date.now },
   hashtags: [{ type: String, trim: true }],
   meta: {
