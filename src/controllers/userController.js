@@ -1,4 +1,4 @@
-// import bcrypt from "bcrypt";
+import bcrypt from "bcrypt";
 import User from "../models/User";
 
 export const getJoin = (req, res) => res.render("join", { pageTitle: "Join" });
@@ -49,14 +49,14 @@ export const postLogin = async (req, res) => {
       errorMessage: "An account with this username does not exists.",
     });
   }
-  // check if password correct
-  // const ok = await bcrypt.compare(password, user.password);
-  // if (!ok) {
-  //   return res.status(400).render("login", {
-  //     pageTitle,
-  //     errorMessage: "Wrong password.",
-  //   });
-  // }
+  // check if password ok
+  const ok = await bcrypt.compare(password, user.password);
+  if (!ok) {
+    return res.status(400).render("login", {
+      pageTitle,
+      errorMessage: "Wrong password.",
+    });
+  }
   req.session.loggedIn = true;
   req.session.user = user;
   return res.redirect("/");
