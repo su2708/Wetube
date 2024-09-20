@@ -17,5 +17,9 @@
   "homepage": "https://github.com/su2708/Wetube#readme",
   "dependencies": {
     "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4"
   }
 }
