@@ -7,7 +7,7 @@
     "url": "git+https://github.com/su2708/Wetube.git"
   },
   "scripts": {
-    "start": "node index.js"
+    "dev": "nodemon -L --exec babel-node index.js"
   },
   "author": "su2708",
   "license": "MIT",
@@ -20,6 +20,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.4"
+    "@babel/node": "^7.25.0",
+    "@babel/preset-env": "^7.25.4",
+    "nodemon": "^3.1.7"
   }
 }
