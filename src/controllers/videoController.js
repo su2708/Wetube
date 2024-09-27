@@ -1,14 +1,29 @@
 export const trending = (req, res) => {
   const videos = [
     {
-        title: "Hello"
+      title: "First Video",
+      rating: 5,
+      comments: 2,
+      createdAt: "2 minutes ago",
+      views: 59,
+      id: 1,
     },
     {
-        title: "Video #2"
-    },
-    {
-        title: "Whats up?"
-    }
+        title: "Second Video",
+        rating: 5,
+        comments: 2,
+        createdAt: "2 minutes ago",
+        views: 59,
+        id: 1,
+      },
+      {
+        title: "Third Video",
+        rating: 5,
+        comments: 2,
+        createdAt: "2 minutes ago",
+        views: 59,
+        id: 1,
+      },
   ];
   return res.render("home", { pageTitle: "Home", videos });
 };
